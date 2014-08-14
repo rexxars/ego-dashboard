@@ -1,0 +1,150 @@
+body {
+    background: #211e1e;
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+ul, li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    margin-top: 20px;
+    text-align: center;
+}
+
+main {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.checkins {
+    min-height: 400px;
+    width: 80%;
+    float: left;
+}
+
+.checkins li {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.25);
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.checkins li:after, .checkins li:before, .cf:after, .cf:before {
+    display: table;
+    content: ' ';
+}
+
+.checkins li:after, .cf:after {
+    clear: both;
+}
+
+.checkins .label {
+    width: 150px;
+    border-radius: 10px;
+    margin-right: 15px;
+    float: left;
+}
+
+.checkins .drinker {
+    text-indent: 50px;
+    font-size: 1.25em;
+}
+
+.checkins h2 {
+    font-weight: normal;
+    margin-top: 0;
+    font-size: 2em;
+}
+
+.checkins .rating {
+    float: right;
+    font-size: 3em;
+    background: rgba(255, 255, 255, 0.25);
+    height: 120px;
+    width: 120px;
+    line-height: 120px;
+    text-align: center;
+    border-radius: 60px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.checkins .rating .fractions {
+    font-size: 0.6em;
+    vertical-align: top;
+}
+
+.checkins .quote {
+    font-size: 1.25em;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.checkins .quote i {
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+.checkins .quote i:first-child {
+    margin-left: 0;
+}
+
+.checkins .quote i:last-child {
+    margin-right: 0;
+}
+
+.checkins .location {
+    font-size: 1.5em;
+    float: right;
+    clear: right;
+}
+
+.checkins .location i {
+    margin-right: 10px;
+}
+
+.top-venues {
+    width: 18%;
+    min-height: 400px;
+    float: right;
+    background: rgba(255, 255, 255, 0.25);
+
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.top-venues h2 {
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-top-right-radius: 15px;
+    text-align: center;
+}
+
+.top-venues li {
+    padding: 10px 5px 10px 10px;
+    border-bottom: 1px dotted #000;
+}
+
+.top-venues .venue-name {
+    float: left;
+    margin: 0;
+}
+
+.top-venues .count {
+    clear: left;
+    float: right;
+    font-weight: bold;
+    font-size: 1.3em;
+
+    background: rgba(255, 255, 255, 0.25);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    text-align: center;
+}

@@ -1,0 +1,40 @@
+{
+  "name": "ego-feed",
+  "version": "1.0.0",
+  "description": "Ego Brygghus untappd checkins",
+  "main": "index.js",
+  "scripts": {
+    "build-react": "browserify --require react --outfile js/react.min.js js/react.min.js",
+    "build-app": "browserify --external react --outfile js/bundle.min.js --global-transform reactify js/app.js",
+    "watch": "watchify -v --external react --outfile js/bundle.min.js --global-transform reactify js/app.js",
+    "build": "npm run build-react & npm run build-app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rexxars/ego-checkins.git"
+  },
+  "keywords": [
+    "ego",
+    "beer",
+    "untappd",
+    "checkins"
+  ],
+  "author": "Espen Hovlandsdal <espen@hovlandsdal.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rexxars/ego-checkins/issues"
+  },
+  "homepage": "https://github.com/rexxars/ego-checkins",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "pubsub-js": "^1.5.0",
+    "react": "^0.11.1",
+    "slug": "^0.5.0",
+    "xhr": "^1.14.1"
+  },
+  "devDependencies": {
+    "browserify": "^5.10.0",
+    "reactify": "^0.14.0",
+    "watchify": "^1.0.2"
+  }
+}
