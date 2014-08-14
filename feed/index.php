@@ -1,8 +1,9 @@
 <?php
-$modified = filemtime('checkins.json');
+$cache = __DIR__ . '/checkins.json';
+$modified = filemtime($cache);
 $now = time();
 $fetchFeed = $modified < ($now - (60 * 3));
-$latest = json_decode(@file_get_contents('checkins.json'), true) ?: array();
+$latest = json_decode(@file_get_contents($cache), true) ?: array();
 
 if ($fetchFeed) {
     try {
@@ -42,7 +43,7 @@ if ($fetchFeed) {
     $merged   = array_merge($checkins, $latest);
     $latest   = array_slice($merged, 0, 200);
 
-    file_put_contents('checkins.json', json_encode($latest));
+    file_put_contents($cache, json_encode($latest));
 }
 
 header('Content-Type: application/json');
