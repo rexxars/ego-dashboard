@@ -41,7 +41,7 @@ if ($fetchFeed) {
     }
 
     $merged   = array_merge($checkins, $latest);
-    $latest   = array_slice($merged, 0, 200);
+    $latest   = array_slice($merged, 0, 1000);
 
     file_put_contents($cache, json_encode($latest));
 }
